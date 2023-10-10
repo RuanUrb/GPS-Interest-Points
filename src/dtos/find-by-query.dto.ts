@@ -1,11 +1,7 @@
-import { IsString, IsNumber, IsNotEmpty, Min } from "class-validator"
+import { IsNumber, Min } from "class-validator"
 
 
 export class FindByQueryDto{
-    @IsString()
-    @IsNotEmpty()
-    name: string
-
     @IsNumber()
     @Min(0)
     x: number
@@ -13,4 +9,8 @@ export class FindByQueryDto{
     @IsNumber()
     @Min(0)
     y: number
+
+    @IsNumber()
+    @Min(0)
+    d: number
 }
